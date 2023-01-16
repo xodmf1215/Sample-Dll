@@ -25,5 +25,5 @@ char* HelloWorld()
 {
     char* res;
     res = (char*)malloc(sizeof(char) * 11);
-    strcpy(res, "HelloWorld");
+    strcpy_s(res, sizeof(char)*11, "HelloWorld");
 }
