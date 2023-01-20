@@ -2,10 +2,18 @@
 //
 
 #include <iostream>
+#include "HelloWorldDll.h"
+#include <stdlib.h>
 
 int main()
-{
-    std::cout << "Hello World!\n";
+{   
+    int strSize = 20;
+    char* str = (char*)malloc(sizeof(char)*strSize);
+    int readNum;
+    HelloWorld(str,strSize);
+    std::cout << str;
+    std::cin >> readNum;
+    free(str);
 }
 
 // 프로그램 실행: <Ctrl+F5> 또는 [디버그] > [디버깅하지 않고 시작] 메뉴

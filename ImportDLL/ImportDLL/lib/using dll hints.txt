@@ -1,0 +1,5 @@
+ It needs to find the headers that declare the DLL exports, the import libraries for the linker, and the DLL itself.
+
+1. One solution is to copy all of these files into your client project. For third-party DLLs that are unlikely to change while your client is in development, this method may be the best way to use them.
+
+2. To avoid out-of-sync code, we recommend you set the include path in your client project to include the DLL header files directly from your DLL project. Also, set the library path in your client project to include the DLL import libraries from the DLL project.
